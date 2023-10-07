@@ -1,44 +1,86 @@
+// import { Link } from "react-router-dom";
+import { NavbarContent, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar, Navbar } from "@nextui-org/react";
+import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 
 
 const Header = () => {
+    const li = <>
+        <li><Link className="font-bold text-lg hover:bg-gray-700 hover:text-white duration-500 rounded-large">Home</Link></li>
+        <li><Link className="font-bold text-lg ">All Toys</Link></li>
+        <li><Link className="font-bold text-lg ">My Toys</Link></li>
+        <li><Link className="font-bold text-lg ">blogs</Link></li>
+        
+        
+    </>
+
     return (
-        <nav className="bg-sky-500">
-            <div className="container mx-auto py-4">
-                <div className="flex justify-between items-center">
-                    <Link to="/" className="text-white font-bold text-2xl">
-                        Toy Website
-                    </Link>
-                    <div className="hidden lg:flex space-x-4">
-                        <Link
-                            to="/"
-                            className="text-white hover:text-indigo-500  py-3 font-semibold"
-                        >
-                            Home
-                        </Link>
-                        <Link
-                            to="/about"
-                            className="text-white hover:text-indigo-500  py-3 font-semibold"
-                        >
-                            About
-                        </Link>
-                        <Link
-                            to="/services"
-                            className="text-white hover:text-indigo-500  py-3 font-semibold"
-                        >
-                            Services
-                        </Link>
-                        <Link
-                            to="/login"
-                            className="text-white hover:text-indigo-500  py-3 font-semibold"
-                        >
-                            Login
-                        </Link>
+
+        <nav className="bg-[#FFC6AC] h-[120px]">
+            <div className="pt-4">
+
+                <div className="navbar h-[90px] border-red-300 border-2 bg-white rounded-lg w-9/12 mx-auto">
+                    <div className="navbar-start">
+                        <div className="dropdown">
+                            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                            </label>
+                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                {li}
+                            </ul>
+                        </div>
+                        <img className="w-[40px] lg:ml-6" src="https://i.ibb.co/wL7rJHP/teddy-22-778x1024.png" alt="" />
+                        <a className="btn btn-ghost normal-case text-3xl text-gray-600 font-bold">Teddy Hugs</a>
                     </div>
+                    <div className="navbar-center hidden lg:flex">
+                        <ul className="menu menu-horizontal px-1">
+                            {li}
+                        </ul>
+                    </div>
+
+                    <div className="indicator">
+                        <span className="indicator-item w-5 badge badge-secondary">7</span>
+                        <FaShoppingCart className="text-2xl" />
+
+
+                    </div>
+                    <Navbar className="w-4 ml-8 h-4">
+                        <NavbarContent as="div" justify="end">
+                            <Dropdown placement="bottom-end">
+                                <DropdownTrigger>
+                                    <Avatar
+                                        isBordered
+                                        as="button"
+                                        className="transition-transform"
+                                        color="secondary"
+                                        name="Jason Hughes"
+                                        size="sm"
+                                        src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+                                    />
+                                </DropdownTrigger>
+                                <DropdownMenu aria-label="Profile Actions" variant="flat">
+                                    <DropdownItem key="profile" className="h-14 gap-2">
+                                        <p className="font-semibold">Signed in as</p>
+                                        <p className="font-semibold">zoey@example.com</p>
+                                    </DropdownItem>
+                                    <DropdownItem key="settings">My Settings</DropdownItem>
+                                    <DropdownItem key="team_settings">Team Settings</DropdownItem>
+                                    <DropdownItem key="analytics">Analytics</DropdownItem>
+                                    <DropdownItem key="system">System</DropdownItem>
+                                    <DropdownItem key="configurations">Configurations</DropdownItem>
+                                    <DropdownItem key="help_and_feedback">Help & Feedback</DropdownItem>
+                                    <DropdownItem key="logout" color="danger">
+                                        Log Out
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </Dropdown>
+                        </NavbarContent>
+                    </Navbar>
                 </div>
             </div>
         </nav>
+
     );
 };
 

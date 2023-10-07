@@ -1,0 +1,198 @@
+[
+    {
+        "name": "Sweet Valentine Teddy",
+        "image": "https://example.com/valentine-teddy.jpg",
+        "price": 19.99,
+        "rating": 4.8,
+        "category": "Holiday Specials"
+    },
+    {
+        "name": "Rainbow Teddy Dreams",
+        "image": "https://example.com/rainbow-teddy.jpg",
+        "price": 24.99,
+        "rating": 4.7,
+        "category": "Holiday Specials"
+    },
+    {
+        "name": "Cute Panda Bear",
+        "image": "https://example.com/panda-bear.jpg",
+        "price": 29.99,
+        "rating": 4.6,
+        "category": "Holiday Specials"
+    },
+    {
+        "name": "Teddy Love Keychain",
+        "image": "https://example.com/keychain-teddy.jpg",
+        "price": 7.99,
+        "rating": 4.5,
+        "category": "Holiday Specials"
+    },
+    {
+        "name": "Classic Teddy Pair",
+        "image": "https://example.com/classic-teddy-pair.jpg",
+        "price": 49.99,
+        "rating": 4.9,
+        "category": "Holiday Specials"
+    },
+    {
+        "name": "Patriotic Teddy Bear",
+        "image": "https://example.com/patriotic-teddy.jpg",
+        "price": 19.99,
+        "rating": 4.7,
+        "category": "Holiday Specials"
+    },
+    {
+        "name": "Miniature Teddy Set",
+        "image": "https://example.com/mini-teddy-set.jpg",
+        "price": 14.99,
+        "rating": 4.8,
+        "category": "Holiday Specials"
+    },
+    {
+        "name": "Bunny Ears Teddy",
+        "image": "https://example.com/bunny-ears-teddy.jpg",
+        "price": 24.99,
+        "rating": 4.6,
+        "category": "Holiday Specials"
+    },
+    {
+        "name": "Superhero Teddy Squad",
+        "image": "https://example.com/superhero-teddy.jpg",
+        "price": 34.99,
+        "rating": 4.9,
+        "category": "Themed Teddies"
+    },
+    {
+        "name": "Vintage Teddy Collection",
+        "image": "https://example.com/vintage-teddy.jpg",
+        "price": 39.99,
+        "rating": 4.7,
+        "category": "Themed Teddies"
+    },
+    {
+        "name": "Cuddly Brown Bear",
+        "image": "https://example.com/brown-bear.jpg",
+        "price": 19.99,
+        "rating": 4.7,
+        "category": "Themed Teddies"
+    },
+    {
+        "name": "Fluffy White Teddy",
+        "image": "https://example.com/white-teddy.jpg",
+        "price": 24.99,
+        "rating": 4.9,
+        "category": "Themed Teddies"
+    },
+    {
+        "name": "Giant Teddy Hugs",
+        "image": "https://example.com/giant-teddy.jpg",
+        "price": 49.99,
+        "rating": 4.8,
+        "category": "Themed Teddies"
+    },
+    {
+        "name": "Pink Teddy Princess",
+        "image": "https://example.com/pink-teddy.jpg",
+        "price": 29.99,
+        "rating": 4.6,
+        "category": "Themed Teddies"
+    },
+    {
+        "name": "Classic Teddy Duo",
+        "image": "https://example.com/classic-teddy.jpg",
+        "price": 39.99,
+        "rating": 4.7,
+        "category": "Classic Teddy Bears"
+    },
+    {
+        "name": "Safari Teddy Adventure",
+        "image": "https://example.com/safari-teddy.jpg",
+        "price": 34.99,
+        "rating": 4.5,
+        "category": "Classic Teddy Bears"
+    },
+    {
+        "name": "Holiday Teddy Collection",
+        "image": "https://example.com/holiday-teddy.jpg",
+        "price": 44.99,
+        "rating": 4.9,
+        "category": "Classic Teddy Bears"
+    },
+    {
+        "name": "Baby's First Teddy",
+        "image": "https://example.com/babys-teddy.jpg",
+        "price": 14.99,
+        "rating": 4.6,
+        "category": "Classic Teddy Bears"
+    },
+    {
+        "name": "Glow-in-the-Dark Teddy",
+        "image": "https://example.com/glow-teddy.jpg",
+        "price": 29.99,
+        "rating": 4.8,
+        "category": "Classic Teddy Bears"
+    },
+    {
+        "name": "Teddy Bear Tea Party Set",
+        "image": "https://example.com/tea-party-teddy.jpg",
+        "price": 39.99,
+        "rating": 4.7,
+        "category": "Classic Teddy Bears"
+    },
+    {
+        "name": "Safari Adventure Teddy",
+        "image": "https://example.com/safari-teddy-2.jpg",
+        "price": 24.99,
+        "rating": 4.5,
+        "category": "Classic Teddy Bears"
+    },
+    {
+        "name": "Eco-Friendly Teddy Bear",
+        "image": "https://example.com/eco-teddy.jpg",
+        "price": 19.99,
+        "rating": 4.6,
+        "category": "Classic Teddy Bears"
+    },
+    {
+        "name": "Teddy Tales Storybook",
+        "image": "https://example.com/storybook-teddy.jpg",
+        "price": 12.99,
+        "rating": 4.4,
+        "category": "Specialty Teddies"
+    },
+    {
+        "name": "Angel Teddy Guardian",
+        "image": "https://example.com/angel-teddy.jpg",
+        "price": 29.99,
+        "rating": 4.9,
+        "category": "Specialty Teddies"
+    },
+    {
+        "name": "Teddy Bear Pajama Set",
+        "image": "https://example.com/pajama-teddy.jpg",
+        "price": 17.99,
+        "rating": 4.7,
+        "category": "Specialty Teddies"
+    },
+    {
+        "name": "Rainbow Teddy Backpack",
+        "image": "https://example.com/backpack-teddy.jpg",
+        "price": 24.99,
+        "rating": 4.8,
+        "category": "Specialty Teddies"
+    },
+    {
+        "name": "Classic Teddy with Bowie",
+        "image": "https://example.com/bowtie-teddy.jpg",
+        "price": 22.99,
+        "rating": 4.5,
+        "category": "Specialty Teddies"
+    },
+    {
+        "name": "Teddy Bear Nursery Decor",
+        "image": "https://example.com/nursery-decor-teddy.jpg",
+        "price": 34.99,
+        "rating": 4.6,
+        "category": "Specialty Teddies"
+    }
+]

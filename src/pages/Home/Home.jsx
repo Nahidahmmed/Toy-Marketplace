@@ -1,8 +1,10 @@
-
+import Wave from "../../Components/Wave";
+import "./Home.css";
 const Home = () => {
     return (
         <div>
-            home
+            hello
+            <Wave></Wave>
         </div>
     );
 };
