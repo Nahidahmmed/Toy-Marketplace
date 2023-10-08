@@ -10,6 +10,7 @@ import Home from './pages/Home/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import { NextUIProvider } from '@nextui-org/react';
+import Blog from './pages/Blog/Blog';
 
 const router = createBrowserRouter([
   {
@@ -28,9 +29,19 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>
       },
+      {
+        path: "/blog",
+        element: <Blog></Blog>
+      },
+      {
+        path: "/shop",
+        element: <p>hello</p>
+      },
     ]
   },
 ]);
+
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <NextUIProvider>

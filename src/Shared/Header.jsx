@@ -7,20 +7,20 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
     const li = <>
-        <li><Link className="font-bold text-lg hover:bg-gray-700 hover:text-white duration-500 rounded-large">Home</Link></li>
-        <li><Link className="font-bold text-lg ">All Toys</Link></li>
-        <li><Link className="font-bold text-lg ">My Toys</Link></li>
-        <li><Link className="font-bold text-lg ">blogs</Link></li>
+        <li><Link className="font-bold text-lg text-[#5C3D1E] hover:bg-gray-700 hover:text-white duration-500 rounded-large">Home</Link></li>
+        <li><Link className="font-bold text-lg text-[#5C3D1E] hover:bg-gray-700 hover:text-white duration-500 rounded-large">All Toys</Link></li>
+        <li><Link className="font-bold text-lg text-[#5C3D1E] hover:bg-gray-700 hover:text-white duration-500 rounded-large">My Toys</Link></li>
+        <li><Link to={"/blog"} className="font-bold text-lg text-[#5C3D1E] hover:bg-gray-700 hover:text-white duration-500 rounded-large">blogs</Link></li>
         
         
     </>
 
     return (
 
-        <nav className="bg-[#FFC6AC] h-[120px]">
+        <nav className="bg-[#DAC0A3] h-[120px]">
             <div className="pt-4">
 
-                <div className="navbar h-[90px] border-red-300 border-2 bg-white rounded-lg w-9/12 mx-auto">
+                <div className="navbar h-[90px] border-[#976737] border-2 bg-white rounded-lg w-9/12 mx-auto">
                     <div className="navbar-start">
                         <div className="dropdown">
                             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -31,7 +31,7 @@ const Header = () => {
                             </ul>
                         </div>
                         <img className="w-[40px] lg:ml-6" src="https://i.ibb.co/wL7rJHP/teddy-22-778x1024.png" alt="" />
-                        <a className="btn btn-ghost normal-case text-3xl text-gray-600 font-bold">Teddy Hugs</a>
+                        <a className="btn btn-ghost normal-case text-3xl text-[#5C3D1E] font-bold">Teddy Hugs</a>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
@@ -41,7 +41,7 @@ const Header = () => {
 
                     <div className="indicator">
                         <span className="indicator-item w-5 badge badge-secondary">7</span>
-                        <FaShoppingCart className="text-2xl" />
+                        <FaShoppingCart className="text-2xl mx-5 text-[#5C3D1E]" />
 
 
                     </div>
@@ -64,12 +64,7 @@ const Header = () => {
                                         <p className="font-semibold">Signed in as</p>
                                         <p className="font-semibold">zoey@example.com</p>
                                     </DropdownItem>
-                                    <DropdownItem key="settings">My Settings</DropdownItem>
-                                    <DropdownItem key="team_settings">Team Settings</DropdownItem>
-                                    <DropdownItem key="analytics">Analytics</DropdownItem>
-                                    <DropdownItem key="system">System</DropdownItem>
-                                    <DropdownItem key="configurations">Configurations</DropdownItem>
-                                    <DropdownItem key="help_and_feedback">Help & Feedback</DropdownItem>
+                                    
                                     <DropdownItem key="logout" color="danger">
                                         Log Out
                                     </DropdownItem>
