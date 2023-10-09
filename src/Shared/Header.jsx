@@ -18,9 +18,8 @@ const Header = () => {
     return (
 
         <nav className="bg-[#DAC0A3] h-[120px]">
-            <div className="pt-4">
-
-                <div className="navbar h-[90px] border-[#976737] border-2 bg-white rounded-lg w-9/12 mx-auto">
+            <div className="pt-4 mx-auto lg:pl-60">
+                <div className="navbar h-[90px] border-[#976737] fixed z-10 border-2 bg-white rounded-lg  lg:w-9/12">
                     <div className="navbar-start">
                         <div className="dropdown">
                             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -31,7 +30,7 @@ const Header = () => {
                             </ul>
                         </div>
                         <img className="w-[40px] lg:ml-6" src="https://i.ibb.co/wL7rJHP/teddy-22-778x1024.png" alt="" />
-                        <a className="btn btn-ghost normal-case text-3xl text-[#5C3D1E] font-bold">Teddy Hugs</a>
+                        <a className="btn btn-ghost normal-case text-xl lg:text-3xl text-[#5C3D1E] font-bold">Teddy Hugs</a>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
@@ -41,9 +40,7 @@ const Header = () => {
 
                     <div className="indicator">
                         <span className="indicator-item w-5 badge badge-secondary">7</span>
-                        <FaShoppingCart className="text-2xl mx-5 text-[#5C3D1E]" />
-
-
+                        <FaShoppingCart className="text-2xl mx-4 lg:mx-5 text-[#5C3D1E]" />
                     </div>
                     <Navbar className="w-4 ml-8 h-4">
                         <NavbarContent as="div" justify="end">
@@ -71,6 +68,7 @@ const Header = () => {
                                 </DropdownMenu>
                             </Dropdown>
                         </NavbarContent>
+                        <h1 className="text-[#5C3D1E] font-bold text-3xl lg:ml-8">20% OFF</h1>
                     </Navbar>
                 </div>
             </div>
