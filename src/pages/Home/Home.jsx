@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Carousel from "../../Components/Carousel";
+import TeddyTab from "../../Components/TeddyTab";
 
 
 const Home = () => {
@@ -79,7 +80,10 @@ const Home = () => {
                 <Wave></Wave>
             </div>
           <Carousel></Carousel>
-
+            <div>
+                <h1 className="font-bold text-[#5C3D1E] text-5xl text-center mt-48">All Teddy By Category</h1>
+                <TeddyTab></TeddyTab>
+            </div>
         </div>
     );
 };

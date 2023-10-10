@@ -11,10 +11,14 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import { NextUIProvider } from '@nextui-org/react';
 import Blog from './pages/Blog/Blog';
+import AllToys from './pages/AllToys/AllToys';
+import Details from './pages/Details/Details';
+import ErrPage from './pages/ErrPage/ErrPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
+    errorElement:<ErrPage></ErrPage>,
     element: <Main></Main>,
     children: [
       {
@@ -32,6 +36,15 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>
+      },
+      {
+        path: "/allToys",
+        element: <AllToys></AllToys>
+      },
+      {
+        path:'/detail/:id',
+        element:<Details></Details>,
+        loader: ({params}) => fetch(`http://localhost:5000/teddy/${params.id}`)
       },
       {
         path: "/shop",
