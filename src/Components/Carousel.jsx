@@ -55,7 +55,7 @@ const Carousel = () => {
     ];
     return (
         <div className="mt-72 text-[#5C3D1E]">
-            <h1 className=" font-bold text-center text-5xl">Popular teddy Bears</h1>
+            <h1 className=" font-bold text-center text-7xl">Popular teddy Bears</h1>
             <ScrollCarousel
                 autoplay
                 autoplaySpeed={8}

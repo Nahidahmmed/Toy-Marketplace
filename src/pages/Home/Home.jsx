@@ -79,11 +79,11 @@ const Home = () => {
                 </Slider>
                 <Wave></Wave>
             </div>
-          <Carousel></Carousel>
             <div>
-                <h1 className="font-bold text-[#5C3D1E] text-5xl text-center mt-48">All Teddy By Category</h1>
+                <h1 className="font-bold text-[#5C3D1E] text-7xl text-center mt-72">All Teddy By Category</h1>
                 <TeddyTab></TeddyTab>
             </div>
+          <Carousel></Carousel>
         </div>
     );
 };

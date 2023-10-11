@@ -1,18 +1,28 @@
 // import { Link } from "react-router-dom";
 import { NavbarContent, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar, Navbar } from "@nextui-org/react";
+import { useContext } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider";
 
 
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(err => console.log(err));
+    }
     const li = <>
         <li><Link className="font-bold text-lg text-[#5C3D1E] hover:bg-gray-700 hover:text-white duration-500 rounded-large">Home</Link></li>
         <li><Link to="/allToys" className="font-bold text-lg text-[#5C3D1E] hover:bg-gray-700 hover:text-white duration-500 rounded-large">All Toys</Link></li>
+        <li><Link to="/addTeddy" className="font-bold text-lg text-[#5C3D1E] hover:bg-gray-700 hover:text-white duration-500 rounded-large">Add Teddy</Link></li>
         <li><Link className="font-bold text-lg text-[#5C3D1E] hover:bg-gray-700 hover:text-white duration-500 rounded-large">My Toys</Link></li>
         <li><Link to={"/blog"} className="font-bold text-lg text-[#5C3D1E] hover:bg-gray-700 hover:text-white duration-500 rounded-large">blogs</Link></li>
-        
-        
+
+
     </>
 
     return (
@@ -43,35 +53,45 @@ const Header = () => {
                         <FaShoppingCart className="text-2xl mx-4 lg:mx-5 text-[#5C3D1E]" />
                     </div>
                     <Navbar className="w-4 ml-8 h-4">
-                        <NavbarContent as="div" justify="end">
-                            <Dropdown placement="bottom-end">
-                                <DropdownTrigger>
-                                    <Avatar
-                                        isBordered
-                                        as="button"
-                                        className="transition-transform"
-                                        color="secondary"
-                                        name="Jason Hughes"
-                                        size="sm"
-                                        src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-                                    />
-                                </DropdownTrigger>
-                                <DropdownMenu aria-label="Profile Actions" variant="flat">
-                                    <DropdownItem key="profile" className="h-14 gap-2">
-                                        <p className="font-semibold">Signed in as</p>
-                                        <p className="font-semibold">zoey@example.com</p>
-                                    </DropdownItem>
-                                    
-                                    <DropdownItem key="logout" color="danger">
-                                        Log Out
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </Dropdown>
-                        </NavbarContent>
-                        <h1 className="text-[#5C3D1E] font-bold text-3xl lg:ml-8">20% OFF</h1>
+                        {
+                            user ?
+
+                                <NavbarContent as="div" justify="end">
+                                    <Dropdown placement="bottom-end">
+                                        <DropdownTrigger>
+                                            <Avatar
+                                                isBordered
+                                                as="button"
+                                                className="transition-transform"
+                                                size="sm"
+                                                src={user.photoURL}
+                                            />
+                                        </DropdownTrigger>
+                                        <DropdownMenu aria-label="Profile Actions" variant="flat">
+                                            <DropdownItem key="profile" className="h-14 gap-2">
+                                                <p className="font-semibold">{user.displayName}</p>
+                                                <p className="font-semibold">{user.email}</p>
+                                            </DropdownItem>
+
+                                            <DropdownItem onClick={handleLogOut} key="logout" color="danger">
+                                                Log Out
+                                            </DropdownItem>
+                                        </DropdownMenu>
+                                    </Dropdown>
+                                </NavbarContent> :
+                                <Link
+                                    to={'/login'}
+                                    className="bg-[#DAC0A3] text-[#5C3D1E] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#c4a078] transition duration-300"
+                                >
+                                    Login
+                                </Link>
+                        }
+                        <h1 className="text-[#5C3D1E] font-bold text-3xl">20% OFF</h1>
                     </Navbar>
                 </div>
             </div>
+
+
         </nav>
 
     );

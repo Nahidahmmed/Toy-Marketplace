@@ -14,11 +14,13 @@ import Blog from './pages/Blog/Blog';
 import AllToys from './pages/AllToys/AllToys';
 import Details from './pages/Details/Details';
 import ErrPage from './pages/ErrPage/ErrPage';
+import AuthProvider from './Providers/AuthProvider';
+import AddTeddy from './pages/AddTeddy/AddTeddy';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    errorElement:<ErrPage></ErrPage>,
+    errorElement: <ErrPage></ErrPage>,
     element: <Main></Main>,
     children: [
       {
@@ -42,9 +44,13 @@ const router = createBrowserRouter([
         element: <AllToys></AllToys>
       },
       {
-        path:'/detail/:id',
-        element:<Details></Details>,
-        loader: ({params}) => fetch(`http://localhost:5000/teddy/${params.id}`)
+        path: "/addTeddy",
+        element: <AddTeddy></AddTeddy>
+      },
+      {
+        path: '/detail/:id',
+        element: <Details></Details>,
+        loader: ({ params }) => fetch(`http://localhost:5000/teddy/${params.id}`)
       },
       {
         path: "/shop",
@@ -58,8 +64,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <NextUIProvider>
-    <React.StrictMode>
-      <RouterProvider router={router} />
-    </React.StrictMode>,
+    <AuthProvider>
+      <React.StrictMode>
+        <RouterProvider router={router} />
+      </React.StrictMode>,
+    </AuthProvider>
   </NextUIProvider>
 )
