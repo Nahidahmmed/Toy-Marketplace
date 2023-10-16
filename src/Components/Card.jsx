@@ -8,7 +8,7 @@ const Card = ({bear}) => {
             <img src={bear.image} alt={bear.name} className="w-[330px] h-72" />
             <div className="px-6 py-4 bg-[#DAC0A3] text-[#5C3D1E] ">
                 <div className="font-bold text-xl mb-2">{bear.name}</div>
-                <p className="text-gray-700 text-base">${bear.price.toFixed(2)}</p>
+                <p className="text-gray-700 text-base">${parseFloat(bear.price).toFixed(2)}</p>
                 <Rating
                     className="mt-2"
                     style={{ maxWidth: 100 }}

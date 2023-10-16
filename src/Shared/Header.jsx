@@ -19,7 +19,7 @@ const Header = () => {
         <li><Link className="font-bold text-lg text-[#5C3D1E] hover:bg-gray-700 hover:text-white duration-500 rounded-large">Home</Link></li>
         <li><Link to="/allToys" className="font-bold text-lg text-[#5C3D1E] hover:bg-gray-700 hover:text-white duration-500 rounded-large">All Toys</Link></li>
         <li><Link to="/addTeddy" className="font-bold text-lg text-[#5C3D1E] hover:bg-gray-700 hover:text-white duration-500 rounded-large">Add Teddy</Link></li>
-        <li><Link className="font-bold text-lg text-[#5C3D1E] hover:bg-gray-700 hover:text-white duration-500 rounded-large">My Toys</Link></li>
+        <li><Link to="/myTeddy" className="font-bold text-lg text-[#5C3D1E] hover:bg-gray-700 hover:text-white duration-500 rounded-large">My Teddy</Link></li>
         <li><Link to={"/blog"} className="font-bold text-lg text-[#5C3D1E] hover:bg-gray-700 hover:text-white duration-500 rounded-large">blogs</Link></li>
 
 
@@ -30,7 +30,7 @@ const Header = () => {
         <nav className="bg-[#DAC0A3] h-[120px]">
             <div className="pt-4 mx-auto lg:pl-60">
                 <div className="navbar h-[90px] border-[#976737] fixed z-10 border-2 bg-white rounded-lg  lg:w-9/12">
-                    <div className="navbar-start">
+                    <div className="lg:mr-[28%]">
                         <div className="dropdown">
                             <label tabIndex={0} className="btn btn-ghost lg:hidden">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -42,7 +42,7 @@ const Header = () => {
                         <img className="w-[40px] lg:ml-6" src="https://i.ibb.co/wL7rJHP/teddy-22-778x1024.png" alt="" />
                         <a className="btn btn-ghost normal-case text-xl lg:text-3xl text-[#5C3D1E] font-bold">Teddy Hugs</a>
                     </div>
-                    <div className="navbar-center hidden lg:flex">
+                    <div className="hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
                             {li}
                         </ul>
@@ -50,9 +50,9 @@ const Header = () => {
 
                     <div className="indicator">
                         <span className="indicator-item w-5 badge badge-secondary">7</span>
-                        <FaShoppingCart className="text-2xl mx-4 lg:mx-5 text-[#5C3D1E]" />
+                        <FaShoppingCart className="text-2xl mx-4 lg:mx-2 text-[#5C3D1E]" />
                     </div>
-                    <Navbar className="w-4 ml-8 h-4">
+                    <Navbar className="w-1 ml-8 h-4">
                         {
                             user ?
 
@@ -81,12 +81,12 @@ const Header = () => {
                                 </NavbarContent> :
                                 <Link
                                     to={'/login'}
-                                    className="bg-[#DAC0A3] text-[#5C3D1E] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#c4a078] transition duration-300"
+                                    className="bg-[#DAC0A3] text-[#5C3D1E] px-4 py-2 rounded-full text-sm font-semibold  hover:bg-[#c4a078] transition duration-300"
                                 >
                                     Login
                                 </Link>
                         }
-                        <h1 className="text-[#5C3D1E] font-bold text-3xl">20% OFF</h1>
+                        <h1 className="text-[#5C3D1E] ml-3 font-bold text-3xl">20% OFF</h1>
                     </Navbar>
                 </div>
             </div>

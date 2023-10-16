@@ -6,7 +6,7 @@ const TeddyTab = () => {
     const [bears, setBears] = useState([]);
     const [tabIndex, setTabIndex] = useState(0);
     useEffect(() => {
-        fetch('http://localhost:5000/teddy')
+        fetch('https://toy-marketplace-server-self.vercel.app/teddy')
             .then(res => res.json())
             .then(data => setBears(data))
             .catch(error => console.error('Error fetching data:', error));

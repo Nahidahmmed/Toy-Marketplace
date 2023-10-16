@@ -8,7 +8,7 @@ const AllToys = () => {
     const maxBearsToShow = showAll ? bears.length : 8;
 
     useEffect(() => {
-        fetch('http://localhost:5000/teddy')
+        fetch('https://toy-marketplace-server-self.vercel.app/teddy')
             .then(res => res.json())
             .then(data => setBears(data))
             .catch(error => console.error('Error fetching data:', error));
@@ -29,7 +29,7 @@ const AllToys = () => {
                                 <img src={bear.image} alt={bear.name} className="w-[330px] h-72" />
                                 <div className="px-6 py-4 bg-[#DAC0A3] text-[#5C3D1E] ">
                                     <div className="font-bold text-xl mb-2">{bear.name}</div>
-                                    <p className="text-gray-700 text-base">${bear.price.toFixed(2)}</p>
+                                    <p className="text-gray-700 text-base">${bear.price}</p>
                                     <Rating
                                     className="mt-2"
                                         style={{ maxWidth: 100 }}

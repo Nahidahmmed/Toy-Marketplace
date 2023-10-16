@@ -5,6 +5,9 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Carousel from "../../Components/Carousel";
 import TeddyTab from "../../Components/TeddyTab";
+import Section1 from "../../Components/Section1";
+import Section2 from "../../Components/Section2/Section2";
+
 
 
 const Home = () => {
@@ -16,7 +19,7 @@ const Home = () => {
         slidesToScroll: 1
     };
 
-  
+
     return (
         <div className="mb-64">
 
@@ -83,7 +86,14 @@ const Home = () => {
                 <h1 className="font-bold text-[#5C3D1E] text-7xl text-center mt-72">All Teddy By Category</h1>
                 <TeddyTab></TeddyTab>
             </div>
-          <Carousel></Carousel>
+            <Carousel></Carousel>
+
+            <div className="">
+                
+               <Section2></Section2>
+                <Section1></Section1>
+                <Wave></Wave>
+            </div>
         </div>
     );
 };

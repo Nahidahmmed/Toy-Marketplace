@@ -16,6 +16,8 @@ import Details from './pages/Details/Details';
 import ErrPage from './pages/ErrPage/ErrPage';
 import AuthProvider from './Providers/AuthProvider';
 import AddTeddy from './pages/AddTeddy/AddTeddy';
+import MyTeddy from './pages/Home/MyTeddys/MyTeddy';
+import PrivateRoute from './PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -45,12 +47,16 @@ const router = createBrowserRouter([
       },
       {
         path: "/addTeddy",
-        element: <AddTeddy></AddTeddy>
+        element: <PrivateRoute><AddTeddy></AddTeddy></PrivateRoute>
+      },
+      {
+        path: "/myTeddy",
+        element: <PrivateRoute><MyTeddy></MyTeddy></PrivateRoute>
       },
       {
         path: '/detail/:id',
-        element: <Details></Details>,
-        loader: ({ params }) => fetch(`http://localhost:5000/teddy/${params.id}`)
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
+        loader: ({ params }) => fetch(`https://toy-marketplace-server-self.vercel.app/teddy/${params.id}`)
       },
       {
         path: "/shop",
